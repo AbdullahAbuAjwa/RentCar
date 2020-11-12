@@ -16,64 +16,49 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/MohammedIrheemBranch" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9fe0f20-dec9-4a0d-abdc-813b11827b23" name="Default Changelist" comment="">
+    <list default="true" id="df7d6cbe-5e5e-43e3-9154-e764bcc4040f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/RentCar2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/Style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/all_car.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MohammedIrheem_Branch" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1k1YGEy9eYbaRMSFchaVfTFeMkX" />
+  <component name="ProjectId" id="1kCVu0CGnJvBypWgqHvwnOrtAYg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mohammed\PycharmProjects\RentCar\CSS" />
-    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9fe0f20-dec9-4a0d-abdc-813b11827b23" name="Default Changelist" comment="" />
-      <created>1604869466448</created>
+      <changelist id="df7d6cbe-5e5e-43e3-9154-e764bcc4040f" name="Default Changelist" comment="" />
+      <created>1605204778388</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604869466448</updated>
+      <updated>1605204778388</updated>
     </task>
     <servers />
   </component>
@@ -82,48 +67,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/MohammedIrheemBranch" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="543" y="279" key="Github.CreatePullRequestDialog" timestamp="1605043162067">
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605206730923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="543" y="279" key="Github.CreatePullRequestDialog/0.0.1536.824@0.0.1536.824" timestamp="1605043162067" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1604871958985">
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1605206730923" />
+    <state x="478" y="201" key="git4idea.merge.GitPullDialog" timestamp="1605206790492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1604871958985" />
-    <state x="657" y="280" key="MultipleFileMergeDialog" timestamp="1604871960445">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="657" y="280" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1604871960445" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605043173398">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605043173398" />
-    <state x="478" y="201" key="git4idea.merge.GitPullDialog" timestamp="1604873201517">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="478" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1604873201517" />
+    <state x="478" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1605206790492" />
   </component>
 </project>
