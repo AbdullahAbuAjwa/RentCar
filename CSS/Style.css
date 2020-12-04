@@ -30,19 +30,68 @@
 
 .container-fluid {
   background-color: #9cccff;
-  height: 600px;
+  height: 100%;
 }
 
 #pricing {
-  padding: 50px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-time {
+  width: 100%;
   text-align: right;
   border-radius: 8px;
   border-style: inset;
   border-color: black;
   background-color: #e6f2ff;
   border-width: 1px;
-  padding: 10px 0;
+  padding: 15px 0;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+#br-mar {
+  width: 25%;
+  height: 20%;
+  margin-top: 20px;
+  font-size: 2.5em;
+}
+
+@media screen and (max-width: 600px) {
+  #br-mar {
+    width: 25%;
+    height: 15%;
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+}
+
+i {
+  margin-left: 8px;
+}
+
+.about-us {
+  margin-top: 3em;
+  text-align: right;
+  padding: 5px 20px;
+}
+
+#about-title {
+  font-weight: bold;
+  font-family: 'Bree Serif', cursive, fantasy;
+  font-size: 35px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li {
+  font-size: 14px;
 }
