@@ -41,24 +41,134 @@
                     </div>
                 </div>
             </a>
-            <li class="nav-item"><a class="nav-link" href="info_rent.html">
-                <button type="button" class="btn btn-outline-dark">إدارة الحجز</button>
-            </a></li>
-            <li class="nav-item"><a class="nav-link" href="#">
-                <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown">
-                    العملة
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">دولار</a>
-                    <a class="dropdown-item" href="#">شيكل</a>
-                </div>
-            </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html">
-                <button type="button" class="btn btn-outline-dark">الصفحة الرئيسية</button>
-            </a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="info_rent.html">
+                    <button type="button" class="btn btn-outline-dark">إدارة الحجز</button>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        العملة
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">دولار</a>
+                        <a class="dropdown-item" href="#">شيكل</a>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <button type="button" class="btn btn-outline-dark">الصفحة الرئيسية</button>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
-
+<div class="column col-2 col-xl-12 col-sm-12 hide-sm" id="filterScreen">
+    <div id="scroller">
+        <div class="cardTransparnt">
+            <div class="filter">
+                <div class="columns">
+                    <div class="column col-12 col-xl-4 col-sm-12">
+                        <div class="accordion">
+                            <input type="checkbox" id="aracfilter-aracsinifi" name="accordion-checkbox" checked hidden>
+                            <label class="accordion-header" for="aracfilter-aracsinifi">
+                                <i class="icon icon-arrow-right mr-1"></i>فئة السيارة
+                            </label>
+                            <div class="accordion-body">
+                                <div class="staticContent">
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="as[]" value="Eko"> <i class="form-icon"></i>
+                                            الاقتصادية
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="as[]" value="Medium"> <i class="form-icon"></i>
+                                            متوسط
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="as[]" value="Lüks"> <i class="form-icon"></i>
+                                            فخم
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="as[]" value="SUV"> <i class="form-icon"></i>
+                                            SUV
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="as[]" value="7+"> <i
+                                                class="form-icon"></i> 7+ مقاعد
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-xl-4 col-sm-12">
+                        <div class="accordion">
+                            <input type="checkbox" id="aracfilter-yakittipi" name="accordion-checkbox" checked hidden>
+                            <label class="accordion-header" for="aracfilter-yakittipi">
+                                <i class="icon icon-arrow-right mr-1"></i> نوع الوقود
+                            </label>
+                            <div class="accordion-body">
+                                <div class="staticContent">
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="yt[]" value="Dizel"> <i class="form-icon"></i>
+                                            ديزل
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="yt[]" value="Benzin"> <i class="form-icon"></i>
+                                            بنزين
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="propcars">
+                            <h6></h6>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-xl-4 col-sm-12">
+                        <div class="accordion">
+                            <input type="checkbox" id="aracfilter-vitestipi" name="accordion-checkbox" checked hidden>
+                            <label class="accordion-header" for="aracfilter-vitestipi">
+                                <i class="icon icon-arrow-right mr-1"></i>الجير نوع
+                            </label>
+                            <div class="accordion-body">
+                                <div class="staticContent">
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="vt[]" value="Manuel"> <i class="form-icon"></i>
+                                            عادي
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="vt[]" value="Otomatik"> <i
+                                                class="form-icon"></i>
+                                            أوتوماتيكي
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
