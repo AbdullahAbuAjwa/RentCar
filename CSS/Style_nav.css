@@ -1,0 +1,33 @@
+nav {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bgNav {
+  background-color: white;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.icon {
+  font-family: 'Germania One';
+  font-size: 3.5rem;
+  margin-right: 30px;
+}
+
+#colred {
+  color: #fc0303
+}
+
+.navbar-collapse {
+  position: absolute;
+  left: 15px;
+}
+
+#phone {
+  direction: ltr;
+  float: left;
+  color: red;
+  font-size: 20px;
+}
