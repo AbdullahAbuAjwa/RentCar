@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>information_user page</title>
+    <link rel="stylesheet" href="Css/Style2.css">
+    <script type="text/javascript" src="JS/js.js"></script>
+
+
+</head>
+<body class="rtl" dir="rtl">
+
+<header>
+
+    <div class="container grid-xl">
+        <div class="columns">
+            <div class="column col-12">
+                <div class="navbar">
+                    <section class="navbar-section">
+
+
+                        <a href="index.html" class="navbar-brand mr-2 col-xs-12 text-center"  style="font-size: 3rem; color:#fc0303" >Rent Car
+
+                        </a>
+
+                    </section>
+                    <section class="navbar-section hide-sm">
+                        <a href="tel:908504331183" class="phone-call hide-md">
+                            <div class="columns">
+                                <div class="column col-auto">
+                                    <span> الدعم الفني</span> <br> <b style="direction: ltr;float: left;">0597750487</b>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown">
+
+                                <a href="/ar/reservation-management/" class="btn btn-header" style="padding:4px 15px;"  tabindex="0">
+
+                                    <img src="https://www.cizgirentacar.com/img/search_reservation_icon_header.png" style="" alt="">
+                                    <span class="hide-lg" style="position: relative;top:-3px;">إدارة الحجز</span>
+
+                                </a>
+
+
+                                                    </div>
+
+                        <div class="dropdown dropdown-right">
+                            <!-- TR -->
+                            <a href="javascript:;" class="btn btn-language dropdown-toggle" tabindex="0" aria-label="ar dili">
+                                <img src="img/flags/flag-ar.svg" alt="">
+                                <i class="icon icon-caret"></i>
+                            </a>
+                            <!-- TR -->
+                            <ul class="menu btn-language-menu headerbtnMenu">
+
+
+                                <li class="menu-item">
+
+                                    <a href="/en/ourcars/" class=" dropdown-toggle"
+                                                   tabindex="0"
+                                                   alt="Click for Car Rental">
+                                                    <img src="https://www.cizgirentacar.com/img/flags/flag-en.svg"
+                                                         alt="Click for Car Rental"> English
+                                    </a>
+                                </li>
+
+
+
+                                <li class="menu-item">
+
+                                    <a href="/ar/seyyaratna/" class=" dropdown-toggle"
+                                                   tabindex="0"
+                                                   alt="انقر لاستئجار سيارة">
+                                                    <img src="https://www.cizgirentacar.com/img/flags/flag-ar.svg"
+                                                         alt="انقر لاستئجار سيارة"> عربي
+                                    </a>
+                                </li>
+
+
+                                                                    </ul>
+                        </div>
+
+
+                            <div class="dropdown dropdown-right" >
+
+                                <a href="javascript:;" class="btn btn-language dropdown-toggle" id="dovizList"
+                                   tabindex="0">
+                                    € EUR <i class="icon icon-caret"></i>
+                                </a>
+                                <!-- menu component -->
+                                <ul class="menu headerbtnMenu">
+                                    <li class="menu-item"><a href="javascript:;" onclick="dovizkuruguncelle('EUR')">€
+                                            EUR</a></li>
+                                    <li class="menu-item"><a href="javascript:;" onclick="dovizkuruguncelle('USD')">$
+                                            USD</a></li>
+
+                                </ul>
+
+                            </div>
+                                                                        <div class="dropdown dropdown-right">
+                            <div class="menumobile dropdown-toggle" tabindex="0">
+                                <div class="top-bun"></div>
+                                <div class="meat"></div>
+                                <div class="bottom-bun"></div>
+                            </div>
+                            </a>
+                            <ul class="menu headerbtnMenu">
+                                <li class="menu-item ">
+                                        <a href="index.html"  >الصفحة الرئيسية</a>
+                                    </li>
+                                <li class="menu-item ">
+                                        <a href="/ar/seyyaratna/"  >سيارات</a>
+                                    </li>
+                                <li class="menu-item ">
+                                        <a href="/ar/alfurue/"  >مكاتبنا</a>
+                                    </li>
+                                <li class="menu-item ">
+                                        <a href="/ar/alaittisalat/"  rel="nofollow">اتصل</a>
+                                    </li>
+                                                                </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <div class="container grid-xl">
+        <div class="columns">
+            <div class="column col-12">
+                    <ol vocab="https://schema.org/" typeof="BreadcrumbList" class="breadcrumn">
+        <li property="itemListElement" typeof="ListItem"> <a property="item" typeof="WebPage" href="https://www.cizgirentacar.com/"><span property="name">الصفحة الرئيسية</span></a><meta property="position" content="1"></li><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/ar/"><span class='line'> › </span><span property="name">استئجار سيارة</span></a><meta property="position" content="2"></li><li property="itemListElement" typeof="ListItem"><span class='line'> › </span><span property="name">معلومات العميل</span><meta property="position" content="3"> </li>    </ol>
+    <div class="clearfix"></div>
+    <br>
+    <style>
+        .breadcrumn, .breadcrumn li {
+            float: left;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .breadcrumn, .breadcrumn li {
+                font-size: 11px;
+            }
+        }
+
+        .breadcrumn li .line {
+            padding: 0px 10px;
+            display: inline-block;
+        }
+    </style>
+                </div>
+            <div class="column col-12">
+
+            </div>
+            <div class="column col-8 col-lg-7 col-md-12 col-sm-12">
+                <form action="rezervasyonyap.php?dil=ar" method="POST" id="musteribilgileri">
+                    <div class="card">
+                        <div class="card-body" style="padding-top:0">
+                            <div class="columns">
+                                <div class="column col-12">
+                                </div>
+                                <div class="column col-6 col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="adinizfield">*اسمك *</label>
+                                        <input class="form-input" type="text" id="adinizfield" name="ad" placeholder="*اسمك" value="" data-rule="required|name">
+                                    </div>
+                                </div>
+                                <div class="column col-6 col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="soyadinizfield">*اسم العائلة *</label>
+                                        <input class="form-input" type="text" id="soyadinizfield" name="soyad" placeholder="*اسم العائلة" value="" data-rule="required|name">
+                                    </div>
+                                </div>
+                                <div class="column col-6 col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="epostaadresfield">*بريد إلكتروني *</label>
+                                        <input class="form-input" type="text" id="epostaadresfield" name="eposta" placeholder="*بريد إلكتروني" value="" data-rule="email|required">
+                                    </div>
+                                </div>
+                                <div class="column col-6 col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="telefonField">*هاتف *</label>
+                                        <!--<input class="" type="hidden" name="TelefonNumarasiKodu" id="telefonFieldKodu" value="90">-->
+                                        <input class="form-input" type="text" name="TelefonNumarasi" id="telefonField" value="" data-rule="phone|required" placeholder="*هاتف">
+                                    </div>
+                                </div>
+                                <div class="column col-6 col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label class="form-label" for="dogumtarihi">تاريخ الميلاد</label>
+                                        <div class="columns">
+                                            <div class="column col-4">
+                                                <select name="dtarih_gun" id="" class="form-select">
+                                                    <option value="">يوم</option>
+                                                                                                            <option value="1">1</option>
+                                                                                                            <option value="2">2</option>
+                                                                                                            <option value="3">3</option>
+                                                                                                            <option value="4">4</option>
+                                                                                                            <option value="5">5</option>
+                                                                                                            <option value="6">6</option>
+                                                                                                            <option value="7">7</option>
+                                                                                                            <option value="8">8</option>
+                                                                                                            <option value="9">9</option>
+                                                                                                            <option value="10">10</option>
+                                                                                                            <option value="11">11</option>
+                                                                                                            <option value="12">12</option>
+                                                                                                            <option value="13">13</option>
+                                                                                                            <option value="14">14</option>
+                                                                                                            <option value="15">15</option>
+                                                                                                            <option value="16">16</option>
+                                                                                                            <option value="17">17</option>
+                                                                                                            <option value="18">18</option>
+                                                                                                            <option value="19">19</option>
+                                                                                                            <option value="20">20</option>
+                                                                                                            <option value="21">21</option>
+                                                                                                            <option value="22">22</option>
+                                                                                                            <option value="23">23</option>
+                                                                                                            <option value="24">24</option>
+                                                                                                            <option value="25">25</option>
+                                                                                                            <option value="26">26</option>
+                                                                                                            <option value="27">27</option>
+                                                                                                            <option value="28">28</option>
+                                                                                                            <option value="29">29</option>
+                                                                                                            <option value="30">30</option>
+                                                                                                            <option value="31">31</option>
+                                                                                                    </select>
+                                            </div>
+
+                                            <div class="column col-4">
+                                                <select name="dtarih_ay" id="" class="form-select">
+                                                    <option value="">شهر</option>
+                                                    <option value="01">يناير</option>
+                                                    <option value="02">فبراير</option>
+                                                    <option value="03">مارس</option>
+                                                    <option value="04">أبريل</option>
+                                                    <option value="05">مايو</option>
+                                                    <option value="06">يونيو</option>
+                                                    <option value="07">يوليو</option>
+                                                    <option value="08">أغسطس</option>
+                                                    <option value="09">سبتمبر</option>
+                                                    <option value="10">اكتوبر</option>
+                                                    <option value="11">نوفمبر</option>
+                                                    <option value="12">ديسمبر</option>
+                                                </select>
+                                            </div>
+                                            <div class="column col-4">
+                                                <select name="dtarih_yil" id="" class="form-select">
+                                                    <option value="">عام</option>
+                                                                                                            <option value="1955">1955</option>
+                                                                                                            <option value="1956">1956</option>
+                                                                                                            <option value="1957">1957</option>
+                                                                                                            <option value="1958">1958</option>
+                                                                                                            <option value="1959">1959</option>
+                                                                                                            <option value="1960">1960</option>
+                                                                                                            <option value="1961">1961</option>
+                                                                                                            <option value="1962">1962</option>
+                                                                                                            <option value="1963">1963</option>
+                                                                                                            <option value="1964">1964</option>
+                                                                                                            <option value="1965">1965</option>
+                                                                                                            <option value="1966">1966</option>
+                                                                                                            <option value="1967">1967</option>
+                                                                                                            <option value="1968">1968</option>
+                                                                                                            <option value="1969">1969</option>
+                                                                                                            <option value="1970">1970</option>
+                                                                                                            <option value="1971">1971</option>
+                                                                                                            <option value="1972">1972</option>
+                                                                                                            <option value="1973">1973</option>
+                                                                                                            <option value="1974">1974</option>
+                                                                                                            <option value="1975">1975</option>
+                                                                                                            <option value="1976">1976</option>
+                                                                                                            <option value="1977">1977</option>
+                                                                                                            <option value="1978">1978</option>
+                                                                                                            <option value="1979">1979</option>
+                                                                                                            <option value="1980">1980</option>
+                                                                                                            <option value="1981">1981</option>
+                                                                                                            <option value="1982">1982</option>
+                                                                                                            <option value="1983">1983</option>
+                                                                                                            <option value="1984">1984</option>
+                                                                                                            <option value="1985">1985</option>
+                                                                                                            <option value="1986">1986</option>
+                                                                                                            <option value="1987">1987</option>
+                                                                                                            <option value="1988">1988</option>
+                                                                                                            <option value="1989">1989</option>
+                                                                                                            <option value="1990">1990</option>
+                                                                                                            <option value="1991">1991</option>
+                                                                                                            <option value="1992">1992</option>
+                                                                                                            <option value="1993">1993</option>
+                                                                                                            <option value="1994">1994</option>
+                                                                                                            <option value="1995">1995</option>
+                                                                                                            <option value="1996">1996</option>
+                                                                                                            <option value="1997">1997</option>
+                                                                                                            <option value="1998">1998</option>
+                                                                                                            <option value="1999">1999</option>
+                                                                                                            <option value="2000">2000</option>
+                                                                                                            <option value="2001">2001</option>
+                                                                                                    </select>
+                                            </div>
+                                        </div>
+                                        <!--<input class="form-input" type="text" id="dogumtarihi" date-rule="required" placeholder="Doğum Tarihi" >-->
+
+                                    </div>
+                                </div>
+
+                                <div class="column col-6 col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <div class="form-label form-label2">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="tcpass" value="tc" onchange="tcpassChangeFunction('tcno')" checked>
+                                                <i class="form-icon"></i> رقم الهوية                                             </label>
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="tcpass" value="pass" onchange="tcpassChangeFunction('pass')">
+                                                <i class="form-icon"></i>
+                                                "رقم جواز السفر "
+                                            </label>
+                                            <div class="float-right">
+                                                <span style="color: red; font-size: 14px; position: relative; top: 6px;">(غير مطلوب)</span>
+                                            </div>
+                                        </div>
+                                        <div id="tckimlikno">
+                                            <input class="form-input" type="text" id="tckimlikNo" name="tckimlikNo" placeholder="رقم الهوية " value="" data-rule="tckimlikDorulama" autocomplete="off">
+                                        </div>
+                                        <div id="passportno" style="display: none;">
+                                            <input class="form-input" type="text" autocomplete="off" id="passportno" name="pasaportno" placeholder="رقم جواز السفر">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="card">
+                        <div class="card-body" style="padding-top:0">
+                           <!-- <div class="">
+                                &lt;!&ndash; form checkbox control &ndash;&gt;
+                                <div class="form-group">
+                                    <label class="form-checkbox">
+                                        <input type="checkbox" id="ucusbilgileriCheckbox">
+                                        <i class="form-icon"></i>
+                                        أريد أن أنقل تفاصيل رحلتي الجوية
+                                    </label>
+                                </div>
+
+                            </div>-->
+                            <div>
+
+                                <div class="columns">
+                                    <div class="column col-6 col-lg-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="form-label" for="input-example-1">رقم رحلة الوصول</label>
+                                            <input class="form-input" type="text" id="gelisucuzno" name="gelisucuzno" placeholder="رقم رحلة الوصول">
+                                        </div>
+                                    </div>
+                                    <!--<div class="column col-6 col-lg-12  col-sm-12">
+                                        <div class="form-group">
+                                            <label class="form-label" for="input-example-1">رقم رحلة العودة</label>
+                                            <input class="form-input" type="text" id="donusucusno" name="donusucusno" placeholder="رقم رحلة العودة">
+                                        </div>
+                                    </div>-->
+                                    <div class="column col-6 col-lg-12  col-sm-12">
+                                        <div class="form-group">
+                                            <label class="form-label" for="input-example-1">ما تريد الإبلاغ عنه</label>
+                                            <input class="form-input" type="text" id="donusucusaciklama" name="iletmekistediginiz" placeholder="ما تريد الإبلاغ عنه">
+
+                                            <!--<textarea class="form-input" type="text" id="donusucusaciklama" style="height: 50px;" name="iletmekistediginiz" placeholder="ما تريد الإبلاغ عنه"></textarea>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="columns">
+                                <div class="column col-12">
+                                    <!-- form checkbox control -->
+                                    <div class="form-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" onclick="checkFluency()" id="faturaCheckbox">
+                                            <i class="form-icon"></i>
+                                            أريد استخدام معلومات فاتورة مختلفة
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div id="faturabilgi" >
+                                        <br>
+
+                                        <div class="columns">
+                                            <div class="column col-6 col-lg-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <select class="form-select" name="fatura_tipi" id="faturatipleri">
+                                                        <option value="bireysel">فاتورة شركة فردية</option>
+                                                        <option value="kurumsal">فاتورة الشركة</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="columns">
+                                            <div class="column col-6 col-lg-12 col-sm-12 bireyselfirma">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="adlabel">اسم</label>
+                                                    <input class="form-input" type="text" id="adfield" name="fatura_adi" placeholder="اسم">
+                                                </div>
+                                            </div>
+                                            <div class="column col-6 col-lg-12 col-sm-12 bireyselfirma">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="soyadlabel">اسم العائلة</label>
+                                                    <input class="form-input" type="text" id="soyadfield" name="fatura_soyadi" placeholder="اسم العائلة">
+                                                </div>
+                                            </div>
+
+                                            <div class="column col-6 col-lg-12 col-sm-12 kurumsalfirma" style="display: none;">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="firmaadilabel">اسم الشركة</label>
+                                                    <input class="form-input" type="text" id="firmaadifield" name="fatura_firmaadi" placeholder="اسم الشركة">
+                                                </div>
+                                            </div>
+
+                                            <div class="column col-6 col-lg-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="ulkefield">بلد</label>
+                                                    <select class="form-select" name="fatura_ulke" id="ulkefield">
+                                                                                                                <option>بلد</option>
+                                                        <option value="Türkiye">Türkiye</option>
+
+                                                                                                                    <option value="Albania">Albania</option>
+                                                                                                                    <option value="Algeria">Algeria</option>
+                                                                                                                    <option value="Australia">Australia</option>
+                                                                                                                    <option value="Austria">Austria</option>
+                                                                                                                    <option value="Azerbaijan">Azerbaijan</option>
+                                                                                                                    <option value="Bahrain">Bahrain</option>
+                                                                                                                    <option value="Belarus">Belarus</option>
+                                                                                                                    <option value="Belgium">Belgium</option>
+                                                                                                                    <option value="Brazil">Brazil</option>
+                                                                                                                    <option value="Britain">Britain</option>
+                                                                                                                    <option value="Bulgaria">Bulgaria</option>
+                                                                                                                    <option value="Canada">Canada</option>
+                                                                                                                    <option value="Croatia">Croatia</option>
+                                                                                                                    <option value="Czech Republic">Czech Republic</option>
+                                                                                                                    <option value="Denmark">Denmark</option>
+                                                                                                                    <option value="Finland">Finland</option>
+                                                                                                                    <option value="France">France</option>
+                                                                                                                    <option value="Georgia">Georgia</option>
+                                                                                                                    <option value="Germany">Germany</option>
+                                                                                                                    <option value="Greece">Greece</option>
+                                                                                                                    <option value="Honduras">Honduras</option>
+                                                                                                                    <option value="Hong Kong">Hong Kong</option>
+                                                                                                                    <option value="Hungary">Hungary</option>
+                                                                                                                    <option value="Iceland">Iceland</option>
+                                                                                                                    <option value="Iranian">Iranian</option>
+                                                                                                                    <option value="Iraq">Iraq</option>
+                                                                                                                    <option value="Israel">Israel</option>
+                                                                                                                    <option value="Italy">Italy</option>
+                                                                                                                    <option value="Jordan">Jordan</option>
+                                                                                                                    <option value="Kazakhistan">Kazakhistan</option>
+                                                                                                                    <option value="Kuwait">Kuwait</option>
+                                                                                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                                                                                    <option value="Latvia">Latvia</option>
+                                                                                                                    <option value="Lebanon">Lebanon</option>
+                                                                                                                    <option value="Lithuania">Lithuania</option>
+                                                                                                                    <option value="Luxembourg">Luxembourg</option>
+                                                                                                                    <option value="Macedonia">Macedonia</option>
+                                                                                                                    <option value="Malaysia">Malaysia</option>
+                                                                                                                    <option value="Malta">Malta</option>
+                                                                                                                    <option value="Monaco">Monaco</option>
+                                                                                                                    <option value="Mongolia">Mongolia</option>
+                                                                                                                    <option value="Netherlands">Netherlands</option>
+                                                                                                                    <option value="North Cyprus">North Cyprus</option>
+                                                                                                                    <option value="Norway">Norway</option>
+                                                                                                                    <option value="Oman">Oman</option>
+                                                                                                                    <option value="Poland">Poland</option>
+                                                                                                                    <option value="Portugal">Portugal</option>
+                                                                                                                    <option value="Russia">Russia</option>
+                                                                                                                    <option value="Serbia">Serbia</option>
+                                                                                                                    <option value="Singapore">Singapore</option>
+                                                                                                                    <option value="Slovakia">Slovakia</option>
+                                                                                                                    <option value="Slovenia">Slovenia</option>
+                                                                                                                    <option value="South Africa">South Africa</option>
+                                                                                                                    <option value="South Korea">South Korea</option>
+                                                                                                                    <option value="Spain">Spain</option>
+                                                                                                                    <option value="Sri Lanka">Sri Lanka</option>
+                                                                                                                    <option value="Sudan">Sudan</option>
+                                                                                                                    <option value="Sweden">Sweden</option>
+                                                                                                                    <option value="Swiss">Swiss</option>
+                                                                                                                    <option value="Tajikistan">Tajikistan</option>
+                                                                                                                    <option value="Train">Train</option>
+                                                                                                                    <option value="Tunisia">Tunisia</option>
+                                                                                                                    <option value="Turkmenistan">Turkmenistan</option>
+                                                                                                                    <option value="Ukraine">Ukraine</option>
+                                                                                                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                                                                                                    <option value="United States of America">United States of America</option>
+                                                                                                                    <option value="Uzbekistan">Uzbekistan</option>
+                                                                                                                    <option value="Yemen">Yemen</option>
+                                                                                                                    <option value="Other">Other</option>
+                                                                                                            </select>
+                                                </div>
+                                            </div>
+                                            <div class="column col-6 col-lg-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="sehirfield">مدينة</label>
+                                                    <input class="form-input" name="fatura_sehir" type="text" id="sehirfield" placeholder="مدينة">
+                                                </div>
+                                            </div>
+
+                                            <div class="column col-6 col-lg-12 col-sm-12 bireyselfirma">
+                                                <div class="form-group">
+                                                    <div class="form-label form-label2">
+
+                                                        <label class="form-radio form-inline">
+                                                            <input type="radio" name="tcpass_ininvoce" value="tc" onchange="tcpassChangeFunction_ininvoce('tcno')" checked>
+                                                            <i class="form-icon"></i> رقم الهوية                                                        </label>
+                                                        <label class="form-radio form-inline">
+                                                            <input type="radio" name="tcpass_ininvoce" value="pass" onchange="tcpassChangeFunction_ininvoce('pass')">
+                                                            <i class="form-icon"></i> رقم جواز السفر                                                        </label>
+                                                    </div>
+                                                    <div id="tckimlikno_ininvoce">
+                                                        <input class="form-input" type="text" id="tckimlikNoinvoce" name="fatura_tckimlikno" placeholder="رقم الهوية " data-rule="tckimlikDorulama">
+                                                    </div>
+                                                    <div id="passportno_ininvoce" style="display: none;">
+                                                        <input class="form-input" type="text" id="passportnoinvoce" name="fatura_passport" placeholder="رقم جواز السفر">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="column col-6 col-lg-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="vergidairesifield">مكتب الضرائب</label>
+                                                    <input class="form-input" type="text" id="vergidairesifield" name="fatura_vergidairesi" placeholder="مكتب الضرائب">
+                                                </div>
+                                            </div>
+
+                                            <div class="column col-6 col-lg-12 col-sm-12 kurumsalfirma" style="display: none;">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="verginofield">الرقم الضريبي</label>
+                                                    <input class="form-input" type="text" id="verginofield" data-rule="integer|minlength-11|maxlength-11" name="fatura_vergino" placeholder="الرقم الضريبي">
+                                                </div>
+                                            </div>
+
+                                            <div class="column col-6 col-lg-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="epostaadresfield">*بريد إلكتروني</label>
+                                                    <input class="form-input" type="text" id="epostaadresfield" name="fatura_epostadresi" placeholder="*بريد إلكتروني" value="">
+                                                </div>
+                                            </div>
+                                            <div class="column col-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="adresfield">عنوان الشركة</label>
+                                                    <textarea class="form-input" id="adresfield" placeholder="عنوان الشركة" name="fatura_vergiadresi" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="card" style="border: 1px solid #ddd;">
+                        <div class="card-body">
+                            <div class="columns">
+                                <div class="column col-12">
+                                    <img src="img/istatistik_icon.png" alt=""><b> أين سمعت عنا؟</b>
+                                    <br>
+                                    <br>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="columns">
+                                        <!---<div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Belirtmek İstemiyorum">
+                                                <i class="form-icon"></i> لا اريد تحديد                                            </label>
+                                        </div>-->
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Arama Motorları" required>
+                                                <i class="form-icon"></i> محرك البحث (Google وما إلى ذلك)                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Sosyal Medya">
+                                                <i class="form-icon"></i> وسائل التواصل الاجتماعي ( Instagram و Facebook وغيرها)                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Radyo">
+                                                <i class="form-icon"></i> مذياع                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Televizyon">
+                                                <i class="form-icon"></i> التلفزيون                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Fiyat Karşılaştırma Siteleri">
+                                                <i class="form-icon"></i> مواقع مقارنة الأسعار                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Bir Yakının Tavsiyesi">
+                                                <i class="form-icon"></i> توصية قريبة                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" value="Kayıtlı Müşteriyim">
+                                                <i class="form-icon"></i> أنا عميل مسجل                                            </label>
+                                        </div>
+                                        <div class="column col-6 col-sm-12">
+                                            <label class="form-radio form-inline">
+                                                <input type="radio" name="nereden_buldunuz" id="otherSelect" value="Diğer">
+                                                <i class="form-icon"></i> آخر                                            </label>
+                                        </div>
+                                        <div class="column col-12 col-sm-12" style="display: none;">
+                                            <label class="">
+                                                <input type="text" class="form-control" name="digeraciklama" placeholder="آخر">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearix"></div>
+                    <br>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="columns">
+                                <div class="column col-12">
+                                    <div class="form-group">
+                                        <!--<label class="form-checkbox">
+                                            <input type="checkbox" name="izinalindi" checked>
+                                            <i class="form-icon"></i>
+                                            <p style="font-size: 13px;margin:0;">أوافق على إرسال رسائل حول الحملة والحدث والصفقات الخاصة إلى معلومات الاتصال الخاصة بي التي قمت بمشاركتها مع Cizgi rent a car (Mızraklı Oto Kiralama Bilişim Temizlik Peyzaj ve Ticaret Limited Şirketi)  ولمشاركة معلوماتي للتسويق المصرح به</p>
+                                        </label>-->
+
+
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" name="aydinlatmametni" value="1">
+                                            <i class="form-icon"></i>
+                                                                                        <p style="font-size: 13px;margin:0;"><p style = "font-size: 13px">؛ أوافق على تلقي رسائل إلكترونية تجارية. </p></p>
+                                        </label>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <input type="hidden" name="paketfiyat[1]" value="0"><input type="hidden" name="paketfiyat[2]" value="0"><input type="hidden" name="paketfiyat[5]" value="1"><input type="hidden" name="paketfiyat[15]" value="0"><input type="hidden" name="paketfiyat[6]" value="0"><input type="hidden" name="paketfiyat[13]" value="0"><input type="hidden" name="paketfiyat[17]" value="0"><input type="hidden" name="alistarihi" value="2020-12-07 09:00:00"><input type="hidden" name="donustarihi" value="2020-12-10 09:00:00"><input type="hidden" name="_alisilce" value="23"><input type="hidden" name="_donusilce" value="23"><input type="hidden" name="_alisdurak" value="45"><input type="hidden" name="_donusdurak" value="45"><input type="hidden" name="alisilceadi" value="İzmir"><input type="hidden" name="donusilceadi" value="İzmir"><input type="hidden" name="alisdurakadi" value="Adnan Menderes H. Dış Hatlar"><input type="hidden" name="donusdurakadi" value="Adnan Menderes H. Dış Hatlar"><input type="hidden" name="_isvalid" value="1"><input type="hidden" name="_alissaati" value="09:00"><input type="hidden" name="_donussaati" value="09:00"><input type="hidden" name="_alistarihi" value="07.12.2020"><input type="hidden" name="_donustarihi" value="10.12.2020"><input type="hidden" name="gunfarki" value="3"><input type="hidden" name="saatfarki" value="0"><input type="hidden" name="sure" value="3"><input type="hidden" name="secilenkur" value="EUR"><input type="hidden" name="aracid" value="26"><input type="hidden" name="searchId" value="c9d379f5-fae1-4f9a-a175-ebedea7db2c0"><input type="hidden" name="tekyonucreti-EUR" value="0"><input type="hidden" name="kiralamatipi" value="gunluk"><input type="hidden" name="aysecimiyapma" value="1">                    <div class="columns rezervasyonBtn">
+                        <div class="column col-12">
+                            <div class="float-right-mobile">
+                                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                <button class="btn btn-blue btn-resbtn2" class="">إكمال الحجز</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column col-4 col-lg-5 col-md-12  col-sm-12 hide-sm" id="creservatinForm">
+                <div class="card">
+                    <div class="card-body" id="creservatin">
+                        <div class="columns">
+                            <div class="column col-2"></div>
+                            <div class="column col-8">
+                                                                <img src="https://www.cizgirentacar.com/upcache/araclar/26/26-a.png" class="crimg" alt="">
+                            </div>
+                            <div class="column col-12">
+                                <h6> Renault Symbol البنزين اليدوية <span>أو مشابه</span></h6>
+                            </div>
+                            <div class="column col-6 col-sm-4 btn-infor">
+                                <img src="https://www.freeiconspng.com/thumbs/gas-icon/gas-icon-9.png" alt="">
+                                <span>بنزين</span>
+                            </div>
+                            <div class="column col-6 col-sm-4 btn-infor">
+                                <img src="https://img.icons8.com/cotton/2x/gearbox.png" alt="">
+                                <span>عادي</span>
+                            </div>
+                            <div class="column col-12">
+                                <div class="columns resaddress">
+                                    <div class="column col-2  text-center">
+                                        <img src="img/donusicon.png" alt="">
+                                    </div>
+                                    <div class="column col-10">
+                                        <span>07.12.2020 09:00</span>
+                                        <div><b>مدينة ازمير - المطار الدولي Adnan Menderes </b></div>
+                                    </div>
+                                    <div class="column col-12">
+                                        <div class="clearfix"></div>
+                                        <br>
+                                    </div>
+
+                                    <div class="column col-2 text-center">
+                                        <img src="img/gelisicon.png" alt="">
+                                    </div>
+                                    <div class="column col-10">
+                                        <span>10.12.2020 09:00</span>
+                                        <div><b>مدينة ازمير - المطار الدولي Adnan Menderes </b></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column col-12">
+                                <hr>
+                            </div>
+                                                        <div class="column col-12 packagesmr">
+
+                                <div class="columns">
+                                    <div class="column col-2 pp text-center">
+                                        <i class="icons-car"></i>
+                                    </div>
+                                    <div class="column col-7">
+                                        <b>سعر تأجير السيارات</b>
+                                        <div><span>3 يوم</span></div>
+                                    </div>
+                                    <div class="column col-3">
+                                        <div class="float-right">
+                                            <div class="packPrice">33 EUR</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <hr>
+                                </div>
+
+
+
+                                                                                                                                        <div class="columns">
+                                            <div class="column col-2 text-center pp">
+                                                                                                    <i class="icons-mhs"></i>
+
+
+                                            </div>
+                                            <div class="column col-7">
+                                                <b>تأمين ضد الأضرار البسيطة</b>
+                                                <div><span>  </span></div>
+                                            </div>
+                                            <div class="column col-3">
+                                                <div class="float-right">
+                                                    <div class="packPrice">                                                            <span class="gunlukfiyat--5">9</span> <span class="">EUR</span>
+
+                                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <hr>
+                                        </div>
+
+                                <div class="col-sm-12">
+                                    <div class="columns TotalAmout2">
+                                        <div class="column col-12 text-center">
+                                            <span><span id="totalTag">42</span> EUR</span>
+                                            <br>
+                                            <label for="">مجموع الرسوم</label>
+                                            <br>
+                                            <label for="">( شامل الضريبة )</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
