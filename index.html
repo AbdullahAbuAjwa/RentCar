@@ -29,38 +29,31 @@
 <header>
   <!-- Nav -->
 
-  <nav class="navbar navbar-expand-md navbar-light">
-    <a id="colred" class="nav-link icon" href="">RentCar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html" id="icon">RentCar&nbsp;<i class="fas fa-car"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <a href="tel:+97259999999" class="phone-call hide-md">
-          <div class="columns">
-            <div class="column col-auto">
-              <i class="icons-headphone"></i>
-            </div>
-            <div class="column col-auto text-center">
-              <span style="color:black">24/7 دعم العملاء</span> <br> <b id="phone">+97259999999</b>
-            </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="info_rent.html"><i class="fas fa-cog"></i>&nbsp;إدارة الحجز <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="all_car.html"><i class="fas fa-car"></i>&nbsp;كل السيارات</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-dollar-sign"></i>&nbsp;
+            العملة
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><i class="fas fa-dollar-sign"></i>&nbsp;دولار</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-shekel-sign"></i>&nbsp;شيكل</a>
           </div>
-        </a>
-        <li class="nav-item"><a class="nav-link" href="info_rent.html">
-            <button type="button" class="btn btn-outline-dark">إدارة الحجز</button>
-          </a></li>
-        <li class="nav-item"><a class="nav-link" href="#">
-            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown">
-              العملة
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">دولار</a>
-              <a class="dropdown-item" href="#">شيكل</a>
-            </div>
-          </a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html">
-            <button type="button" class="btn btn-outline-dark">الصفحة الرئيسية</button>
-          </a></li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><i class="fas fa-home"></i>&nbsp;الصفحة الرئيسية</a>
+        </li>
       </ul>
     </div>
   </nav>
