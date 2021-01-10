@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <%- include('_head_part') %>
+    <link rel="stylesheet" href="/CSS/rent_info.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <%- include('_navbar_part') %>
+    <!-- end Navbar -->
+    <!-- rent info card -->
+    <div class="info-input">
+      <div class="card">
+        <div class="card-header">
+          <h4>إجراءات الحجز</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-title">يمكنك عرض معلومات الحجوزات الحالية أو السابقة الخاصة بك ، باستخدام البريد الالكتروني.
+          </p>
+          <form>
+            <div class="form-group was-validated">
+              <label style="font-size:15px;" for="email">عنوان البريد الالكتروني</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required>
+              <div class="valid-feedback">متوفر.</div>
+              <div class="invalid-feedback">الرجاء إدخال إيميل صحيح!</div>
+            </div>
+          </form>
+          <div class="bt-search">
+            <a href="/rent_info_details" class="btn btn-primary">ابحث</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end rent info card -->
+    <!-- Footer -->
+    <%- include('_footer_part') %>
+    <!-- end Footer -->
+</body>
+
+</html>

@@ -2,7 +2,8 @@
 #icon {
   font-family: 'Germania One';
   font-size: 2.5rem;
-  color: red;
+  border-radius: 5px;
+  color:  #158467;
 }
 
 .navbar {
@@ -15,16 +16,24 @@ nav .navbar-brand {
 }
 
 nav .navbar-brand:hover {
+  transition: 0.6s;
   border-radius: 5px;
   background-color: #eee;
 }
 
 nav .nav-item {
+  border-radius: 5px;
   font-size: 15px;
   font-weight: 700;
+  margin: 0px 2px;
 }
 
 nav .nav-item:hover {
+  transition: 0.6s;
   border-radius: 5px;
-  background-color: #eee;
+  background-color: #158467;
+}
+.active {
+  border-radius: 5px;
+  background-color: #158467;
 }

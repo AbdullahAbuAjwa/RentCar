@@ -1,0 +1,58 @@
+body {
+  background-color: #eee;
+}
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-bottom: 10px;
+}
+/* cards */
+.carsCard {
+  margin: auto;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+}
+
+#image-title {
+  background-color: #dfdfdf;
+  border-radius: 6px 0px 0px 6px;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+#avai {
+  background-color:#295939;
+  color:white;
+  padding: 2px 3px;
+  border-radius: 8px;
+}
+#unavai {
+  background-color:#af2d2d;
+  color:white;
+  padding: 2px 3px;
+  border-radius: 8px;
+}
+
+/* bye boxes */
+#buy-box {
+  float: left;
+  margin: 0px 7px 16px 0px;
+}
+
+#buy-box:hover {
+  transition: 0.6s;
+  background-color: #eee;
+}
+@media screen and (max-width: 600px) {
+  #buy-box {
+    float: none;
+    width: auto;
+    height: 10rem;
+  }
+}
