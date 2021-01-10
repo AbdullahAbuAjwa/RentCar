@@ -1,13 +1,13 @@
 {
-  "name": "RentCarTest",
+  "name": "RentCar",
   "version": "1.0.0",
   "description": "simple rent car project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "ahmed-abuwarda",
+  "author": "ahmed_abuwarda, mohammed_irheem, abdullah_abuajwa",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.5",
