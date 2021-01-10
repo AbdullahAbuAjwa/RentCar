@@ -1,0 +1,64 @@
+<% if(cars.length > 0) { %>
+  <% cars.forEach(car => { %>
+    <div class="card mb-3 text-right carsCard">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="/IMG/<%= car.name %>.png" class="card-img" alt="Renault Symbol">
+          <h5 id="image-title" class="card-title">
+            <%= car.gertype %>&nbsp;<%= car.fuletype %>&nbsp;<%= car.name %>
+          </h5>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- specifications card -->
+            <!-- buy price box -->
+            <div id="buy-box" class="card text-center">
+              <div class="card-body"><br>
+                <h1 class="card-title">$<%= car.cost %>
+                </h1>
+                <p class="card-text">قم بحجز هذه السيارة الأن لمدة 3 أيام</p>
+                <% if (car.available == false) { %>
+                  <button href="/user_info_page" id="rentnow" class="btn btn-primary" disabled>استئجار السيارة</button>
+                <% } else { %>  
+                  <a href="/user_info_page/<%= car.id %> " id="rentnow" class="btn btn-primary">استئجار السيارة</a>
+                <% } %> 
+              </div>
+            </div>
+            <!-- end buy price box -->
+            <div class="card text-right">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" >المواصفات</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">تتمتع هذه السيارة:</h5>
+                <p class="card-text">بالعديد من المميزات اهمها:</p>
+                <ul>
+                  <li class="d-inline"><strong>فئة السيارة:</strong>&nbsp;<%= car.cartype %>&nbsp;</li>
+                  <li class="d-inline"><strong>نوع الوقود:</strong>&nbsp;<%= car.fuletype %>&nbsp;</li><br>
+                  <li class="d-inline"><strong>نوع الجير:</strong>&nbsp;<%= car.gertype %>&nbsp;</li>
+                  <li class="d-inline"><strong>السعة:</strong>&nbsp;<%= car.capacity %>&nbsp;</li>
+                  <% if (car.available) { %> 
+                    <li class="d-inline" id="avai"><strong></strong>متاح&nbsp;</li>
+                  <% } else { %> 
+                    <li class="d-inline" id="unavai"><strong></strong>غير متاح&nbsp;</li>
+                  <% } %> 
+                </ul>
+              </div>
+            </div>
+            <!-- end specifications card -->
+            <p class="card-text"><small class="text-muted">يجب أن يكون لديك 2 سنة على الأقل من رخصة القيادة لهذه السيارة
+                ويجب أن يكون عمرك 21 سنة</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+<% } else { %> 
+  <div style="margin: 180px auto 300px auto;">
+    <h1 class="text-center">اوبس! ، لايوجد سيارات متاحة حاليا!</h1>
+  </div>
+<% } %> 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <%- include('_head_part') %>
+    <link rel="stylesheet" href="/CSS/user_info_page.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <%- include('_navbar_part') %>
+    <!-- end Navbar -->
+    <!-- user info card -->
+    <form action="/user/new" method="POST" class="container text-right mt-5">
+      <!-- cars card -->
+      <div class="card mb-3 text-right carsCard">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="/IMG/<%= car.name %>.png" class="card-img" alt="Renault Symbol">
+            <h5 id="image-title" class="card-title">
+              <%= car.gertype %>&nbsp;<%= car.fuletype %>&nbsp;<%= car.name %>
+            </h5>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <!-- specifications card -->
+              <!-- buy price box -->
+              <div id="buy-box" class="card text-center">
+                <div class="card-body"><br>
+                  <h1 class="card-title">$<%= car.cost %>
+                  </h1>
+                  <p class="card-text">قم بحجز هذه السيارة الأن لمدة 3 أيام</p>
+                </div>
+              </div>
+              <!-- end buy price box -->
+              <div class="card text-right">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">المواصفات</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">تتمتع هذه السيارة:</h5>
+                  <p class="card-text">بالعديد من المميزات اهمها:</p>
+                  <ul>
+                    <li class="d-inline"><strong>فئة السيارة:</strong>&nbsp;<%= car.cartype %>&nbsp;</li>
+                    <li class="d-inline"><strong>نوع الوقود:</strong>&nbsp;<%= car.fuletype %>&nbsp;</li><br>
+                    <li class="d-inline"><strong>نوع الجير:</strong>&nbsp;<%= car.gertype %>&nbsp;</li>
+                    <li class="d-inline"><strong>السعة:</strong>&nbsp;<%= car.capacity %>&nbsp;</li>
+                    <li class="d-inline" id="avai"><strong></strong>متاح&nbsp;</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end specifications card -->
+              <p class="card-text"><small class="text-muted">يجب أن يكون لديك 2 سنة على الأقل من رخصة القيادة لهذه
+                  السيارة
+                  ويجب أن يكون عمرك 21 سنة</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end cars card -->
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col">
+            <label for="firstname">اسمك*</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" placeholder="اسمك" required>
+          </div>
+          <div class="col">
+            <label for="lastname">اسم العائلة*</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" placeholder="اسم العائلة" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email">البريد الالكتروني*</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="البريد الالكتروني" required>
+          </div>
+          <div class="col">
+            <label for="phone">رقم الهاتف*</label>
+            <input maxlength="10" type="text" name="phone" id="phone" class="form-control" placeholder="رقم الهاتف"
+              required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="birthdate">تاريخ الميلاد*</label>
+            <input type="date" name="birthdate" id="birthdate" class="form-control" placeholder="تاريخ الميلاد"
+              required>
+          </div>
+          <div class="col">
+            <label for="idnumber">رقم الهوية*</label>
+            <input maxlength="9" type="text" name="idnumber" id="idnumber" class="form-control" placeholder="رقم الهوية"
+              required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="city">المدينة/حي*</label>
+            <select id="city" name="city" class="form-control">
+              <option selected disabled value="">مكان الاستلام/العودة</option>
+              <option>دوار النجمة - رفح</option>
+              <option>خانيونس</option>
+              <option>النصيرات - محافظة الوسطى</option>
+              <option>دوار فلسطين - محافظة غزة</option>
+              <option>الترنس - محافظة الشمال</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="policy" required>
+            <label style="margin-right: 16px;" class="form-check-label" for="policy">
+              اوافق على سياسة الاستخدام والشروط.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="emailmessage" required>
+            <label style="margin-right: 16px;" class="form-check-label" for="emailmessage">
+              اوافق على ارسال رسائل للبريد الالكتروني.
+            </label>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="carid" value="<%= car.id %>">
+      <a href="/home" class="btn btn-outline-secondary ml-2">الغاء</a>
+      <button class="btn btn-success" type="submit">اكمال التسجيل</button>
+    </form>
+    <!-- end user info card -->
+    <!-- Footer -->
+    <%- include('_footer_part') %>
+      <!-- end Footer -->
+</body>
+
+</html>
