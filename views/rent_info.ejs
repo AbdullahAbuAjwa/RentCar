@@ -19,17 +19,16 @@
         <div class="card-body">
           <p class="card-title">يمكنك عرض معلومات الحجوزات الحالية أو السابقة الخاصة بك ، باستخدام البريد الالكتروني.
           </p>
-          <form>
+          <form action="/rent_info_details" method="POST">
             <div class="form-group was-validated">
-              <label style="font-size:15px;" for="email">عنوان البريد الالكتروني</label>
-              <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required>
+              <label style="font-size:15px;" for="email">عنوان البريد الالكتروني:</label>
+              <input type="email" class="form-control" id="email" autofocus placeholder="name@example.com" name="email" required>
               <div class="valid-feedback">متوفر.</div>
               <div class="invalid-feedback">الرجاء إدخال إيميل صحيح!</div>
             </div>
+            <a href="/" class="btn btn-outline-secondary">رجوع</a>
+            <button type="submit" class="btn btn-primary bt-search">ابحث</button>
           </form>
-          <div class="bt-search">
-            <a href="/rent_info_details" class="btn btn-primary">ابحث</a>
-          </div>
         </div>
       </div>
     </div>

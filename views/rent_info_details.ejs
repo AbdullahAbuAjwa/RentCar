@@ -3,19 +3,23 @@
 
 <head>
   <%- include('_head_part') %>
-    <link rel="stylesheet" href="/CSS/rent_info_details.css">
+  <link rel="stylesheet" href="/CSS/rent_info_details.css">
 </head>
 
 <body>
   <!-- Navbar -->
   <%- include('_navbar_part') %>
     <!-- end Navbar -->
-    <h5 class="container text-right mt-4">عزيزي المتأجر:</h5>
+    <% if (user == undefined) { %>
+      <h5 class="container text-right mt-4">عزيزي المتأجر:&nbsp;لايوجد بيانات!</h5>
+    <% } else {%>  
+      <h5 class="container text-right mt-4">عزيزي المتأجر:&nbsp;<%= user.firstname %>&nbsp;<%= user.lastname %></h5>
+    <% } %> 
     <!-- rent info current details table -->
-    <table class="table text-right container contain mt-5">
+    <table class="table text-center container contain mt-5">
       <thead class="thead-light">
         <tr>
-          <th colspan="5">الحجوزات الحالية</th>
+          <th colspan="6">الحجوزات الحالية</th>
         </tr>
       </thead>
       <tbody>
@@ -25,19 +29,45 @@
           <th>من</th>
           <th>الى</th>
           <th>المبلغ</th>
-        </tr> 
-        <tr>
-          <th scope="row">1</th>
-          <td>edtsbg</td>
-          <td>eatb</td>
-          <td>eat</td>
-          <td>aerbv</td>
+          <th>ضبط</th>
         </tr>
+        <% if (user != undefined) { %>
+          <% if(user.underrents.length > 0) { %>
+            <% let i = 1; %> 
+            <% user.underrents.forEach(car => { %>
+              <form action="/edit_car" method="POST">
+                <input type="hidden" name="userid" value="<%= user.id %>">
+                <input type="hidden" name="carid" value="<%= car.id %>">
+                <input type="hidden" name="name" value="<%= car.name %>">
+                <input type="hidden" name="from" value="<%= car.from.toDateString() %>">
+                <input type="hidden" name="to" value="<%= car.to.toDateString() %>">
+                <input type="hidden" name="cost" value="<%= car.cost %>">
+                <tr>
+                  <th scope="row"><%= i %></th>
+                  <td><%= car.name %></td>
+                  <td><%= car.from.toDateString() %></td>
+                  <td><%= car.to.toDateString() %></td>
+                  <td>$<%= car.cost %></td>
+                  <td><button class="btn btn-danger">الغاء الحجز</button></td>
+                </tr>
+              </form>
+              <% i++; %> 
+            <% }) %> 
+          <% } else { %>
+            <tr>
+              <td colspan="6">لايوجد بيانات</td>
+            </tr>
+          <% } %> 
+        <% } else { %>
+          <tr>
+            <td colspan="6">لايوجد بيانات</td>
+          </tr>
+        <% } %> 
       </tbody>
     </table>
     <!-- end rent info current details table -->
     <!-- rent info recent details table -->
-    <table class="table text-right container contain mt-5">
+    <table class="table text-center container contain mt-5">
       <thead class="thead-light">
         <tr>
           <th colspan="5">الحجوزات السابقة</th>
@@ -51,29 +81,32 @@
           <th>الى</th>
           <th>المبلغ</th>
         </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>Fiat</td>
-          <td>1/1/2021</td>
-          <td>2/1/2021</td>
-          <td>22$</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Volvo</td>
-          <td>2/1/2021</td>
-          <td>3/1/2021</td>
-          <td>21$</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Scoda</td>
-          <td>3/1/2021</td>
-          <td>4/1/2021</td>
-          <td>25$</td>
-        </tr>
+        <% if (user != undefined) { %>
+          <% if(user.lastrents.length > 0) { %>
+            <% let k = 1; %> 
+            <% user.lastrents.forEach(car => { %>
+              <tr>
+                <th scope="row"><%= k %></th>
+                  <td><%= car.name %></td>
+                  <td><%= car.from.toDateString() %></td>
+                  <td><%= car.to.toDateString() %></td>
+                  <td>$<%= car.cost %></td>
+              </tr>
+              <% k++; %> 
+            <% }) %> 
+          <% } else { %>
+              <tr>
+                <td colspan="6">لايوجد بيانات</td>
+              </tr> 
+          <% } %>
+        <% } else { %>
+            <tr>
+              <td colspan="6">لايوجد بيانات</td>
+            </tr> 
+        <% } %> 
       </tbody>
     </table>
+
     <!-- end rent info recent details table -->
     <!-- Footer -->
     <%- include('_footer_part') %>
