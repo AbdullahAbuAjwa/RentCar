@@ -11,9 +11,9 @@
   <%- include('_navbar_part') %>
     <!-- end Navbar -->
     <% if (user == undefined) { %>
-      <h5 class="container text-right mt-4">عزيزي المتأجر:&nbsp;لايوجد بيانات!</h5>
-    <% } else {%>  
-      <h5 class="container text-right mt-4">عزيزي المتأجر:&nbsp;<%= user.firstname %>&nbsp;<%= user.lastname %></h5>
+      <h5 class="container text-right mt-4">عزيزي المتأجر:&nbsp;<span class="colored">لايوجد بيانات!</span></h5>
+    <% } else { %>  
+      <h5 class="container text-right mt-4">عزيزي المتأجر:&nbsp;<span class="colored"><%= user.firstname %>&nbsp;<%= user.lastname %></span></h5>
     <% } %> 
     <!-- rent info current details table -->
     <table class="table text-center container contain mt-5">
