@@ -100,13 +100,29 @@
           <div class="col-md-6">
             <label for="city">المدينة/حي*</label>
             <select id="city" name="city" class="form-control">
-              <option selected disabled value="">مكان الاستلام/العودة</option>
+              <option selected disabled value="">المدينة/الحي</option>
               <option>دوار النجمة - رفح</option>
               <option>خانيونس</option>
               <option>النصيرات - محافظة الوسطى</option>
               <option>دوار فلسطين - محافظة غزة</option>
               <option>الترنس - محافظة الشمال</option>
             </select>
+          </div>
+          <div class="col-md-3">
+            <label for="from">من*</label>
+            <% if (globa.from == '') { %> 
+                <input type="date" name="from" id="from" class="form-control" required>
+            <% } else { %>
+                <input type="date" name="from" id="from" class="form-control" value="<%= globa.from %>" required>
+            <% } %> 
+          </div>
+          <div class="col-md-3">
+            <label for="to">الى*</label>
+            <% if (globa.to == '') { %>
+                <input type="date" name="to" id="to" class="form-control" required>
+            <% } else { %>
+                <input type="date" name="to" id="to" class="form-control" value="<%= globa.to %>" required>
+            <% } %>
           </div>
         </div>
       </div>

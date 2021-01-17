@@ -29,6 +29,14 @@ const userSchema = new Schema({
   city: {
     type: String,
     required: true
+  },
+  underrents: {
+    type: Array,
+    required: true
+  },
+  lastrents : {
+    type: Array,
+    required: true
   }
 }, { titmestamps: true });
 const User = mongoose.model('user', userSchema);
