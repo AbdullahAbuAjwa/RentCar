@@ -9,7 +9,15 @@
 <body>
   <!-- Navbar -->
   <%- include('_navbar_part') %>
-    <!-- end Navbar -->
+  <!-- end Navbar -->
+  <% if (message == 1) { %> 
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+      <strong>مرحبا&nbsp;</strong>الرجاء التاكد من قيم التاريخ الصحيحة.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% } %> 
     <!-- user info card -->
     <form action="/user/new" method="POST" class="container text-right mt-5">
       <!-- cars card -->
@@ -66,22 +74,21 @@
         <div class="row">
           <div class="col">
             <label for="firstname">اسمك*</label>
-            <input type="text" id="firstname" name="firstname" class="form-control" placeholder="اسمك" required>
+            <input type="text" id="firstname" name="firstname" class="form-control" placeholder="اسمك" minlength="3" maxlength="20" required>
           </div>
           <div class="col">
             <label for="lastname">اسم العائلة*</label>
-            <input type="text" id="lastname" name="lastname" class="form-control" placeholder="اسم العائلة" required>
+            <input type="text" id="lastname" name="lastname" class="form-control" placeholder="اسم العائلة" minlength="3" maxlength="20" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label for="email">البريد الالكتروني*</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="البريد الالكتروني" required>
+            <input type="email" id="email" name="email" class="form-control" placeholder="example@test.com" minlength="12" required>
           </div>
           <div class="col">
             <label for="phone">رقم الهاتف*</label>
-            <input maxlength="10" type="text" name="phone" id="phone" class="form-control" placeholder="رقم الهاتف"
-              required>
+            <input type="text"maxlength="10" minlength="10" name="phone" id="phone" class="form-control" placeholder="0599123456" required>
           </div>
         </div>
         <div class="row">
@@ -92,14 +99,14 @@
           </div>
           <div class="col">
             <label for="idnumber">رقم الهوية*</label>
-            <input maxlength="9" type="text" name="idnumber" id="idnumber" class="form-control" placeholder="رقم الهوية"
+            <input type="text" maxlength="9" minlength="9" name="idnumber" id="idnumber" class="form-control" placeholder="123456789"
               required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <label for="city">المدينة/حي*</label>
-            <select id="city" name="city" class="form-control">
+            <select id="city" name="city" class="form-control" required>
               <option selected disabled value="">المدينة/الحي</option>
               <option>دوار النجمة - رفح</option>
               <option>خانيونس</option>
@@ -111,17 +118,17 @@
           <div class="col-md-3">
             <label for="from">من*</label>
             <% if (globa.from == '') { %> 
-                <input type="date" name="from" id="from" class="form-control" required>
+                <input type="datetime-local" name="from" id="from" class="form-control" required>
             <% } else { %>
-                <input type="date" name="from" id="from" class="form-control" value="<%= globa.from %>" required>
+                <input type="datetime-local" name="from" id="from" class="form-control" value="<%= globa.from %>" required>
             <% } %> 
           </div>
           <div class="col-md-3">
             <label for="to">الى*</label>
             <% if (globa.to == '') { %>
-                <input type="date" name="to" id="to" class="form-control" required>
+                <input type="datetime-local" name="to" id="to" class="form-control" required>
             <% } else { %>
-                <input type="date" name="to" id="to" class="form-control" value="<%= globa.to %>" required>
+                <input type="datetime-local" name="to" id="to" class="form-control" value="<%= globa.to %>" required>
             <% } %>
           </div>
         </div>

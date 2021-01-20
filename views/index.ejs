@@ -9,11 +9,19 @@
 <body>
   <!-- Navbar -->
   <%- include('_navbar_part') %>
-    <!-- end Navbar -->
+  <!-- end Navbar -->
+  <% if (message == 1) { %> 
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+      <strong>مرحبا&nbsp;</strong>الرجاء التاكد من قيم التاريخ الصحيحة.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% } %>
     <!-- rent-info-card-form-->
     <form action="/search_result" method="POST">
       <div class="contain mt-4">
-        <div class="card text-center" style="width: 218px;">
+        <div class="card text-center" style="width: 26rem;">
           <h5 class="card-header">مكان الاستلام/العودة</h5>
           <div class="card-body">
             <select id="receive_place" name="receive_place" class="form-control" required>
@@ -26,28 +34,16 @@
             </select>
           </div>
         </div>
-        <div class="card text-center" style="width: 218px;">
-          <h5 class="card-header">تاريخ الاستلام</h5>
+        <div class="card text-center" style="width: 26rem;">
+          <h5 class="card-header">تاريخ الاستلام مع الوقت</h5>
           <div class="card-body">
-            <input type="date" class="form-control" id="receive_date" name="receive_date" required>
+            <input type="datetime-local" class="form-control" id="receive_date" name="receive_date" required>
           </div>
         </div>
-        <div class="card text-center" style="width: 218px;">
-          <h5 class="card-header">وقت الاستلام</h5>
+        <div class="card text-center" style="width: 26rem;">
+          <h5 class="card-header">تاريخ العودة مع الوقت</h5>
           <div class="card-body">
-            <input type="time" class="form-control" id="receive_time" name="receive_time" required>
-          </div>
-        </div>
-        <div class="card text-center" style="width: 218px;">
-          <h5 class="card-header">تاريخ العودة</h5>
-          <div class="card-body">
-            <input type="date" class="form-control" id="arrive_date" name="arrive_date" required>
-          </div>
-        </div>
-        <div class="card text-center" style="width: 218px;">
-          <h5 class="card-header">وقت العودة</h5>
-          <div class="card-body">
-            <input type="time" class="form-control" id="arrive_time" name="arrive_time" required>
+            <input type="datetime-local" class="form-control" id="arrive_date" name="arrive_date" required>
           </div>
         </div>
       </div>

@@ -11,41 +11,57 @@
   <%- include('_navbar_part') %>
     <!-- end Navbar -->
     <!-- search bar-->
-    <form action="/search_result/filter" method="POST" id="search-bar" class="card text-right" style="width: 190px;">
+    <form action="/search_result/filter" method="POST" id="search-bar" class="card text-right">
       <div class="card-header">
         بحث متقدم
       </div>
       <ul class="list-group list-group-flush text-right">
         <li class="list-group-item">
           <h5 class="card-title">فئة السيارة</h5>
-
-          <input type="radio" name="cartype" id="economy" value="الاقتصادية" required>
-          <label for="economy">الاقتصادية</label><br>
-
-          <input type="radio" name="cartype" id="mediume" value="متوسط" required>
-          <label for="mediume">متوسط</label><br>
-
-          <input type="radio" name="cartype" id="SUV" value="SUV" required>
-          <label for="SUV">SUV</label><br>
-
-          <input type="radio" name="cartype" id="7seets" value="مقاعد +7" required>
-          <label for="7seets">مقاعد +7</label>
+          <ul class="filter-list">
+            <li>
+              <input type="radio" name="cartype" id="economy" value="الاقتصادية" required>
+              <label for="economy">الاقتصادية</label>
+            </li>
+            <li>
+              <input type="radio" name="cartype" id="mediume" value="متوسط" required>
+              <label for="mediume">متوسط</label>
+            </li>
+            <li>
+              <input type="radio" name="cartype" id="SUV" value="SUV" required>
+              <label for="SUV">SUV</label>
+            </li>
+            <li>
+              <input type="radio" name="cartype" id="7seets" value="مقاعد +7" required>
+              <label for="7seets">مقاعد +7</label>
+            </li>
+          </ul>
         </li>
         <li class="list-group-item">
           <h5 class="card-title">نوع الوقود</h5>
-          <input type="radio" name="fuletype" id="dezel" value="ديزل" required>
-          <label for="dezel">ديزل</label><br>
-
-          <input type="radio" name="fuletype" id="benzin" value="بنزين" required>
-          <label for="benzin">بنزين</label>
+          <ul class="filter-list">
+            <li>
+              <input type="radio" name="fuletype" id="dezel" value="ديزل" required>
+              <label for="dezel">ديزل</label>
+            </li>
+            <li>
+              <input type="radio" name="fuletype" id="benzin" value="بنزين" required>
+              <label for="benzin">بنزين</label>
+            </li>
+          </ul>
         </li>
         <li class="list-group-item">
           <h5 class="card-title">نوع الجير</h5>
-          <input type="radio" name="gertype" id="normal" value="عادي" required>
-          <label for="normal">عادي</label><br>
-
-          <input type="radio" name="gertype" id="automatic" value="اوتوماتيكي" required>
-          <label for="automatic">اوتوماتيكي</label>
+          <ul class="filter-list">
+            <li>
+              <input type="radio" name="gertype" id="normal" value="عادي" required>
+              <label for="normal">عادي</label>
+            </li>
+            <li>
+              <input type="radio" name="gertype" id="automatic" value="اوتوماتيكي" required>
+              <label for="automatic">اوتوماتيكي</label>
+            </li>
+          </ul>
         </li>
         <li class="list-group-item">
           <button class="btn btn-success">فلتر البحث</button>
@@ -54,11 +70,11 @@
     </form>
     <!-- end search bar-->
     <!-- cars card -->
-    <%- include('_car_card_part') %> 
-    <!-- end cars card -->
-    <!-- Footer -->
-    <%- include('_footer_part') %>
-    <!-- end Footer -->
+    <%- include('_car_card_part') %>
+      <!-- end cars card -->
+      <!-- Footer -->
+      <%- include('_footer_part') %>
+        <!-- end Footer -->
 </body>
 
 </html>

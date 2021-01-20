@@ -17,14 +17,20 @@
           <h4>إجراءات الحجز</h4>
         </div>
         <div class="card-body">
-          <p class="card-title">يمكنك عرض معلومات الحجوزات الحالية أو السابقة الخاصة بك ، باستخدام البريد الالكتروني.
+          <p class="card-title">يمكنك عرض معلومات الحجوزات الحالية أو السابقة الخاصة بك ، باستخدام البريد الالكتروني ورقم الهوية معا.
           </p>
           <form action="/rent_info_details" method="POST">
             <div class="form-group was-validated">
               <label style="font-size:15px;" for="email">عنوان البريد الالكتروني:</label>
-              <input type="email" class="form-control" id="email" autofocus placeholder="name@example.com" name="email" required>
+              <input type="email" class="form-control" id="email" autofocus placeholder="name@example.com" name="email" minlength="12" required>
               <div class="valid-feedback">متوفر.</div>
               <div class="invalid-feedback">الرجاء إدخال إيميل صحيح!</div>
+            </div>
+            <div class="form-group was-validated">
+              <label style="font-size:15px;" for="idnumber">رقم الهوية:</label>
+              <input type="text" class="form-control" maxlength="9" minlength="9" id="idnumber" placeholder="123456789" name="idnumber" required>
+              <div class="valid-feedback">متوفر.</div>
+              <div class="invalid-feedback">الرجاء إدخال رقم هوية صحيح!</div>
             </div>
             <a href="/" class="btn btn-outline-secondary">رجوع</a>
             <button type="submit" class="btn btn-primary bt-search">ابحث</button>

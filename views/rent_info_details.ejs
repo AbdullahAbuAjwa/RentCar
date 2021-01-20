@@ -33,7 +33,7 @@
         </tr>
         <% if (user != undefined) { %>
           <% if(user.underrents.length > 0) { %>
-            <% let i = 1; %> 
+            <% let i = 1; var total = 0;%> 
             <% user.underrents.forEach(car => { %>
               <form action="/edit_car" method="POST">
                 <input type="hidden" name="userid" value="<%= user.id %>">
@@ -42,35 +42,49 @@
                 <input type="hidden" name="from" value="<%= car.from.toDateString() %>">
                 <input type="hidden" name="to" value="<%= car.to.toDateString() %>">
                 <input type="hidden" name="cost" value="<%= car.cost %>">
+                <% let to = new Date(car.to); %> 
+                <% let from = new Date(car.from); %> 
+                <% let diff = to.getTime() - from.getTime(); %> 
+                <% let days = (Math.floor(diff / (1000 * 60 * 60 * 24))); %> 
+                <% let cost = days * car.cost %> 
+              <% if ((i % 2 == 0)) { %>
+                <tr class="table-light">
+              <% } else { %> 
                 <tr>
+              <% } %> 
                   <th scope="row"><%= i %></th>
                   <td><%= car.name %></td>
                   <td><%= car.from.toDateString() %></td>
                   <td><%= car.to.toDateString() %></td>
-                  <td>$<%= car.cost %></td>
-                  <td><button class="btn btn-danger">الغاء الحجز</button></td>
+                  <td>$<%= cost %></td>
+                  <td><button class="btn btn-info">الغاء الحجز</button></td>
                 </tr>
               </form>
-              <% i++; %> 
+              <% i++; total += parseInt(cost, 10); %> 
             <% }) %> 
           <% } else { %>
             <tr>
+              <% total = 0; %>
               <td colspan="6">لايوجد بيانات</td>
             </tr>
           <% } %> 
         <% } else { %>
           <tr>
+            <% total = 0; %> 
             <td colspan="6">لايوجد بيانات</td>
           </tr>
         <% } %> 
       </tbody>
     </table>
     <!-- end rent info current details table -->
+    <!-- total money  -->
+    <h5 class="container text-right mt-4">المبلغ المطلوب:&nbsp;<span class="colored"><%= total %>$</span></h5>
+    <!-- total money  -->
     <!-- rent info recent details table -->
     <table class="table text-center container contain mt-5">
       <thead class="thead-light">
         <tr>
-          <th colspan="5">الحجوزات السابقة</th>
+          <th colspan="6">الحجوزات السابقة</th>
         </tr>
       </thead>
       <tbody>
@@ -80,33 +94,50 @@
           <th>من</th>
           <th>الى</th>
           <th>المبلغ</th>
+          <th>ضبط</th>
         </tr>
         <% if (user != undefined) { %>
           <% if(user.lastrents.length > 0) { %>
-            <% let k = 1; %> 
+            <% let k = 1; var paid = 0; %> 
             <% user.lastrents.forEach(car => { %>
-              <tr>
-                <th scope="row"><%= k %></th>
-                  <td><%= car.name %></td>
-                  <td><%= car.from.toDateString() %></td>
-                  <td><%= car.to.toDateString() %></td>
-                  <td>$<%= car.cost %></td>
-              </tr>
-              <% k++; %> 
+              <form action="/delete_car" method="POST">
+              <input type="hidden" name="carid" value="<%= car.id %>">
+              <input type="hidden" name="userid" value="<%= user.id %>">
+              <% let to = new Date(car.to); %> 
+              <% let from = new Date(car.from); %> 
+              <% let diff = to.getTime() - from.getTime(); %> 
+              <% let days = (Math.floor(diff / (1000 * 60 * 60 * 24))); %> 
+              <% let cost = days * car.cost %>
+              <% if ((k % 2 == 0)) { %>
+                <tr class="table-light">
+              <% } else { %> 
+                <tr>
+              <% } %> 
+                  <th scope="row"><%= k %></th>
+                    <td><%= car.name %></td>
+                    <td><%= car.from.toDateString() %></td>
+                    <td><%= car.to.toDateString() %></td>
+                    <td>$<%= cost %></td>
+                    <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                </tr>
+              </form>
+              <% k++; paid += parseInt(cost, 10); %> 
             <% }) %> 
           <% } else { %>
               <tr>
+                <% paid = 0; %> 
                 <td colspan="6">لايوجد بيانات</td>
               </tr> 
           <% } %>
         <% } else { %>
             <tr>
+              <% paid = 0; %>
               <td colspan="6">لايوجد بيانات</td>
             </tr> 
         <% } %> 
       </tbody>
     </table>
-
+    <h5 class="container text-right mt-4">مجمل المدفوعات:&nbsp;<span class="colored2"><%= paid %>$</span></h5>
     <!-- end rent info recent details table -->
     <!-- Footer -->
     <%- include('_footer_part') %>
