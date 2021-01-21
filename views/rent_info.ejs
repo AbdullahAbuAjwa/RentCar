@@ -10,6 +10,14 @@
   <!-- Navbar -->
   <%- include('_navbar_part') %>
     <!-- end Navbar -->
+    <% if (message == 1) { %> 
+      <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        <strong>مرحبا&nbsp;</strong>الرجاء التاكد من القيم المدخلة صحيحة.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% } %>
     <!-- rent info card -->
     <div class="info-input">
       <div class="card">

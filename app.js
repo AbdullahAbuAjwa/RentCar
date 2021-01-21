@@ -39,7 +39,8 @@ app.get('/home', (req, res) => {
   });
 });*/
 app.get('/rent_info', (req, res) => {
-  res.render('rent_info', { title: 'Information' });
+  global.message = 0;
+  res.render('rent_info', { title: 'Information', message: global.message });
 });
 app.get('/all_cars', (req, res) => {
   global.dates = { from: '', to: '' };
@@ -51,11 +52,19 @@ app.get('/all_cars', (req, res) => {
   });
 });
 app.post('/rent_info_details', (req, res) => {
-  User.find({ email: req.body.email, idnumber: req.body.idnumber }).then((result) => {
-    res.render('rent_info_details', { title: 'Information Details', user: result[0] });
-  }).catch((err) => {
-    res.status(404).render('404', { title: 'Error' });
-  });
+  global.message = 0;
+  let em = req.body.email;
+  let idn = req.body.idnumber;
+  if (em.length >= 12 && idn.length >= 9) {
+    User.find({ email: req.body.email, idnumber: req.body.idnumber }).then((result) => {
+      res.render('rent_info_details', { title: 'Information Details', user: result[0] });
+    }).catch((err) => {
+      res.status(404).render('404', { title: 'Error' });
+    });
+  } else {
+    global.message = 1;
+    res.render('rent_info', { title: 'Information', message: global.message });
+  } 
 });
 app.get('/user_info_page/:id', (req, res) => {
   Car.findById(req.params.id).then(result => {
